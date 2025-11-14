@@ -5,9 +5,6 @@ let palpitesUsuario = {};
 let palpitesAtuais = {};
 let userToken = null;
 
-// URL DO BACKEND (CONFIGURE AQUI!)
-const BACKEND_URL = 'https://bolao-backend-gules.vercel.app'; // Mude depois do deploy!
-
 // Elementos DOM
 const loginScreen = document.getElementById('loginScreen');
 const appScreen = document.getElementById('appScreen');
