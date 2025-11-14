@@ -16,7 +16,3 @@ const SPREADSHEET_ID = '1JgNY9wNnoYiR2bDzotxoAujXS7eUHReFG_l9-fZ_eqA';
 // CHAVE DA API DO GOOGLE
 const API_KEY = 'AIzaSyB2Svcz1v91fSfZ3pX8ukjdFDAPl_KOjsCQ';
 
-// URL DO BACKEND
-const BACKEND_URL = 'https://bolao-2026-geral-backend.vercel.app';
-
-// ========================================================
