@@ -4,7 +4,7 @@
 const DATAS_LIMITE = {
     'Grupo': new Date('2026-06-12T14:00:00'),
     '16 avos': new Date('2025-11-12T12:00:00'),
-    'Oitavas': new Date('2026-06-28T12:00:00'),
+    'Oitavas de final': new Date('2026-06-28T12:00:00'),
     'Quartas de final': new Date('2026-07-03T16:00:00'),
     'Semifinais': new Date('2026-07-07T16:00:00'),
     'Terceiro e Quarto': new Date('2026-07-11T14:00:00'),
