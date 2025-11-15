@@ -90,7 +90,28 @@ body {
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de ondulação ao clicar */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::before {
+    width: 300px;
+    height: 300px;
 }
 
 .btn-primary {
@@ -247,18 +268,37 @@ body {
     margin: 20px 0 15px 0;
 }
 
+/* ANIMAÇÕES */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
 .jogo-card {
     background: #f0f2f6;
     padding: 25px;
     border-radius: 15px;
     margin-bottom: 20px;
     border: 2px solid #e0e0e0;
-    transition: all 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* ← Mudança suave */
+    animation: fadeInUp 0.5s ease-out; /* ← Animação de entrada */
 }
 
 .jogo-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.2);
     border-color: #4CAF50;
 }
 
@@ -290,10 +330,22 @@ body {
     transition: all 0.3s;
 }
 
+.gols-input:hover {
+    border-color: #aaa;
+    background: #fafafa;
+}
+
+
 .gols-input:focus {
     outline: none;
     border-color: #4CAF50;
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
+    transform: scale(1.05);
+    background: white;
+}
+
+.gols-input:not(:placeholder-shown) {
+    border-color: #4CAF50;
 }
 
 .gols-display {
