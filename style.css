@@ -14,6 +14,12 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+
+     /* FUNDO DE GRAMADO */
+    background-image: url('foto_fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .header {
