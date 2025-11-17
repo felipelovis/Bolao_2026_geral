@@ -5,10 +5,17 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    /* FUNDO DE GRAMADO */
+    background-image: url('foto_fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
-    padding: 20px;
 }
 
 .container {
@@ -41,14 +48,20 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 60vh;
+
+    background-image: url('foto_fundo.png'); /* ou o nome que você deu */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .login-box {
-    background: white;
+    background: rgba(255, 255, 255, 0.95); /* Substitua o background existente */
+    backdrop-filter: blur(10px);
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    max-width: 450px;
     width: 100%;
 }
 
@@ -287,7 +300,8 @@ body {
 }
 
 .jogo-card {
-    background: #f0f2f6;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 25px;
     border-radius: 15px;
     margin-bottom: 20px;
@@ -525,4 +539,16 @@ body {
         font-size: 1.1rem;
         padding: 15px 30px;
     }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    pointer-events: none;
 }
