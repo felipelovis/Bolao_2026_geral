@@ -206,7 +206,9 @@ body {
 }
 
 .fase-section {
-    background: white;
+    background: rgba(255, 255, 255, 0.65); /* Branco semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+    /*background: white;*/
     padding: 30px;
     border-radius: 15px;
     margin-bottom: 30px;
