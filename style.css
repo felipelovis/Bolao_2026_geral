@@ -262,7 +262,7 @@ body {
 }
 
 .jogo-card {
-    background: rgba(255, 255, 255, 0.25); /* Branco semi-transparente */
+    background: rgba(255, 255, 255, 0.60); /* Branco semi-transparente */
     backdrop-filter: blur(10px); /* Efeito de vidro fosco */
     /*background: #f0f2f6;*/
     padding: 25px;
